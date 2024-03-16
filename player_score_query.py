@@ -49,8 +49,8 @@ if __name__ == "__main__":
     player_game_data = score_table.query(
         KeyConditionExpression=Key('player_name').eq('James Smith'),
         # Follow lab step to uncomment the following statements.
-        # FilterExpression=Attr('badge').eq('Champs'),
-        # Limit=5,
+        FilterExpression=Attr('badge').eq('Champs'),
+        Limit=5,
         ReturnConsumedCapacity='TOTAL')
 
     end_time = time.time()
